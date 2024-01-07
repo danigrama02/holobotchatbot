@@ -1,0 +1,17 @@
+=================================
+Raport
+
+Algoritmul nostru inteligent care sta la baza aplicatiei are ca scop selectarea unui raspuns cat mai valid la o
+intrebare pusa de utilizator legat de programare .
+Algoritmul este reailizat in python si are la baza libraria chatterbot care contine un model de chat bot neantrenat pe
+care noi il antrenam ulterior.
+Flowuri algoritm :
+    - flowul de baza este punerea intrebarilor si raspunderea la acestea, totodata chatbotul invata si din conversatia
+      propriuzisa cu utiliztorul
+    - flowul de train este alcatuit din citirea datelor in format csv, preprocesarea lor pentru a eliminca caractere
+    nedorite dar si asocierea raspunsurilor de anterenament cu intrebarile de antrenament si antrenarea propriuzisa a chatbotului
+    - flowul de benchmarck ia date valide de test si testeaza cat de similarea au fost raspunsurile chatbotului
+    cu raspunsurile reale din datele de test dupa care intoarce un nr cuprins intre [0,1] care reprezita procentul de similaritate
+
+
+
