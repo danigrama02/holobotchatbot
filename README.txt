@@ -8,22 +8,20 @@ As an ide if you want to edit it I recomand VS code because other IDEs that make
 will not work.
 You can also run it from the cmd.
 
-cum rulam :
-din terminal ne asiguram ca python 3.8 este pus in path env 
-intram in folderul in care se gaseste manage.py, acesta este holobotwebapi 
-si scriem urmatoarea comanda 
+Run guide :
+open a cmd in the foler containing the manage.py file
+than type the command :
 python manage.py runserver
 
-si se porneste pe portul 8000 serverul local de django unde este botul
-requesturi si raspunsuri : 
+it will start on 127.0.0.1:8000 and this are the api request and response examples:
 
 Base url : http:/127.0.0.1:8000/ 
 
-Url pentru raspunsuri la intrebari :  
+Url for question answering :  
 
 http://127.0.0.1:8000/get-response/ 
 
-Request de POST cu body :  
+Request POST with example body :  
 
 { 
 
@@ -31,7 +29,7 @@ Request de POST cu body :
 
 } 
 
-Si raspuns de forma : 
+Response : 
 
 { 
 
@@ -43,11 +41,11 @@ Si raspuns de forma :
 
  
 
-Url pentru training : 
+Training url : 
 
 http://127.0.0.1:8000/train/ 
 
-Cu request :  
+Request example, it contains a conversation that the bot will remember :  
 
 { 
 
@@ -63,27 +61,15 @@ Cu request :
 
 } 
 
-Si raspuns:  
+Answer:  
 
 "Successfully trained the bot with the new data" 
 
-Url pentru benchmarck: 
+Benchmarking url: 
 
 http://127.0.0.1:8000/benchmark/ 
 
-Cu request de GET si raspuns : 
+Get Request and Response : 
 
 {"results":"The results of the benchmarks made no 131 is a similarity between the given responses and the real response of 0.78569238957705648","nr_of_questions_responded":"131"}
 
-de preferat sa nu se foloseasca requestul de train deoarece se poate sa il strice de cap daca e rulat de pe server,
-ceva cu threaduri si chestii foarte delicate cand vrea merge cand nu se supara
-in cazul in care se strica ceva luati din nou fisierul db.sqlite3, stergeti cel de pe pc si pune ti l iar 
-acela e fisierul in care are chatterbot baza de date cu grafurile de conversatie si se poate defecta foarte random 
-
-inca o problema importanta, deoarece codistu din spatele chatterbot e la fel de bun ca si noi a hardcodat o tampenie si trebuie modificata asa ca in folderul urmator :
-C:\Users\dani7\AppData\Local\Programs\Python\Python38\Lib\site-packages\chatterbot
-cu userul vostru gasiti fisierul : tagging.py
-in acest fisier la linia 13 trebuie sters si pus urmatorul cod 
-self.nlp = spacy.load("en_core_web_sm")
-altfel va da erroare 
-bafta !
