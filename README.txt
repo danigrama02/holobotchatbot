@@ -1,14 +1,12 @@
-Deci ca sa facem sa functioneze acest minunat server, cum chatterbot are fite 90% din timp trebuie 
-respectate urmatoarele cerinte extrem de strict :
+Requirements in order to run the server that hosts the chatbot:
 
-Versiune de python : obligatoriu 3.8.0
+Python Version : 3.8.0
 Instalat requirements : 
 pip install -r requirements.txt
 
-Ide folosit : neaparat VISUAL STUDIO CODE fara nici o extensie, rularea se va face din terminal
-orice alt ide care creaza un venv pentru rulare nu este bun doarece chatterbot e scris cu stanga de un 
-itist care a terminat cursuri cum sa devi itist in 3 ore si e foarte foarte sensibil la orice schimbare
-are o baza de date care daca nu o gaseste salut s a dus
+As an ide if you want to edit it I recomand VS code because other IDEs that make a venv
+will not work.
+You can also run it from the cmd.
 
 cum rulam :
 din terminal ne asiguram ca python 3.8 este pus in path env 
